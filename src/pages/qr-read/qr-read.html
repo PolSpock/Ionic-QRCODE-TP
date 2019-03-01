@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>qr Read</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+                <button ion-button (tap)="fromCamera()">Read from Camera</button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <button ion-button (tap)="fromImage()">Read from Image</button>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="qrText">
+            <ion-col col-12>
+                Text&nbsp;:&nbsp;<b>{{ qrText }}</b>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

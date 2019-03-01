@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>qr History</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let history of historyProvider.getHistory()">
+            <div class="card-title">{{history.text}}</div>
+            <div class="card-subtitle">{{history.createdAt}}</div>
+        </button>
+    </ion-list>
+</ion-content>
